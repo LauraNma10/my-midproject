@@ -1,0 +1,400 @@
+body{
+    font-family: 'ClashDisplay-Medium', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: navy;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+@keyframes switchBackground {
+    0% {
+      background-image: url('../images/smfestimage.jpg');
+    }
+    25% {
+      background-image: url('../images/images.jpg');
+    }
+    50% {
+      background-image: url('../images/images\ \(1\).jpg');
+    }
+    75% {
+        background-image: url('../images/download.jpg');
+    }
+    100% {
+        background-image: url('../images/backgroundimage.webp');
+    }
+}
+.hero-section {
+    width: 100%;
+    animation: switchBackground 30s infinite;
+    background-size: cover;
+  }
+.hero-section {
+    background-image: url("../images/smfestimage.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.hero-section .container-fluid {
+    position: relative;
+    z-index: 2;
+}
+.hero-logo a img {
+    height: 42px;
+}
+.nav-bar {
+    margin-top: 55px;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    font-size: 23px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");   
+}
+.navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23fa5132' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");   
+}
+.nav-links li a , .bi-search , .bi-list {
+    color: white;
+}
+.nav-links li a {
+    font-family: 'Agrandir-Regular', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-right: 57px;
+}
+.nav-links li a:hover {
+    color: var(--button-active);
+}
+.nav-links li .active {
+    color: red;
+}
+.hero-text {
+    color: white;
+}
+.sponsor {
+    font-family: 'Poppins-Regular', Arial, sans-serif;
+    letter-spacing: 1px;
+    width: 180px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-image: var(--button-first);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+.sponsor::after,.sponsor::before {
+    content: "SPONSOR";
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    left: 0;
+    width: 100%;
+    line-height:50px;
+    text-transform: capitalize;
+    transition: all 600ms;
+}
+.sponsor::before {
+    content: "REGISTER";
+    left: 190px;
+    background: red;
+}
+.sponsor:hover {
+    background:orangered;
+}
+.sponsor:hover::before {
+    left: 0;
+}
+.sponsor:hover::after {
+    left: -200px;
+    background: var(--button-second);
+}
+.sponsor a {
+    color: var(--white);
+}
+.anticipate {
+    font-family: 'ClashDisplay-Semibold', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 10px;
+    letter-spacing: 7px;
+}
+.smfest {
+    font-family: 'ClashDisplay-Bold', Arial, sans-serif;
+    font-size: 110px;
+    line-height: 130px;
+}
+.owerri {
+    font-family: 'ClashDisplay-Bold', Arial, sans-serif;
+    font-size: 110px;
+    line-height: 80px;
+}
+.theme {
+    font-size: 18px;
+    margin-top: 30px;
+}
+.ticket {
+    border: 2px solid rgb(26, 24, 24);
+    outline: none;
+    background-color: transparent;
+    padding: 12px 21px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-right: 60px;
+}
+.ticket:hover {
+    color: var(--indigo);
+}
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(8, 0, 60, 0.5), 0 0 10px rgba(8, 0, 60, 0.5), 0 0 20px rgba(8, 0, 60, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(8, 0, 60, 1), 0 0 30px rgba(8, 0, 60, 1), 0 0 40px rgba(8, 0, 60, 1);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(8, 0, 60, 0.5), 0 0 10px rgba(8, 0, 60, 0.5), 0 0 20px rgba(8, 0, 60, 0.5);
+    }
+}
+.bi-play-fill {
+    color: var(--white);
+    border: 2px solid var(--indigo);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding-top: 2px;
+    padding-left: 3px;
+    font-size: 27px;
+    text-align: center;
+    animation: glow 22s infinite;
+}
+.bi-play-fill:hover {
+    color: var(--indigo);
+}
+.sponsor2 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 9px;
+    margin-left: 20px;
+}
+.sponsor2 a {
+    color: var(--white);
+}
+@media only screen and(max-width:768px){
+    .nav-bar {
+        margin-top: 30px;
+    }
+    .navbar-toggler {
+        margin-left: 40px;
+    }
+    .hero-logo a img {
+        height: 36px;
+    }
+    .bi-search {
+        align-items: center;
+    }
+    .anticipate {
+        font-size: 11px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .smfest {
+        font-size: 65px;
+        line-height: 65px;
+        margin-bottom: 0;
+    }
+    .theme {
+        padding: 0 5px;
+    }
+    .owerri {
+        font-size: 65px;
+        line-height: 70px;
+        margin-bottom: 0;
+    }
+    .ticket {
+        font-size: 12px;
+        margin-left: 120px;
+        margin-bottom: 20px;
+    }
+    .bi-play-fill {
+        font-size: 23px;
+        padding-top: 4px;
+        margin-left: 110px;
+        margin-right: 0;
+    }
+    .sponsor2 {
+        font-size: 13px;
+        margin-left: 10px;
+        margin-right: 0;
+        margin-top: 12px;
+    }
+    .bi-list {
+        padding: 200px;
+    }
+}
+@media only screen and(min-width:768px){
+    .nav-bar {
+        margin-top: 20px;
+    }
+    .nav-bar nav {
+        padding-left: 68px;
+        padding-top: 0;
+    }
+    .nav-links {
+        position: fixed;
+        width: 100%;
+        background: var(--drop-down);
+        top: 80px;
+        left: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        padding-top: 8px;
+        padding-bottom: 7px;
+    }
+    .nav-links li:hover {
+        background-color: var(--white);
+    }
+    .nav-links li .active {
+        color: var(--white);
+    }
+    .nav-links li a {
+        text-transform: capitalize;
+        font-size: 14px;
+        padding: 30px;
+    }
+    .nav-links li a:hover {
+        color: var(--title-color);
+    }
+    .sponsor {
+        margin-right: 100px;
+        margin-left: 30px;
+    }
+    .anticipate {
+        margin-top: 40px;
+        font-size: 14px;
+    }
+    .smfest {
+        font-size: 80px;
+        line-height: 100px;
+    }
+    .owerri {
+        font-size: 80px;
+        line-height: 60px;
+    }
+    .theme {
+        font-size: 15px;
+        margin-top: 30px;
+    }
+    .ticket {
+        font-size: 15px;
+    }
+    .sponsor2 {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .bi-play-fill {
+        font-size: 24px;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+}
+.card {
+    border: 5px solid white;
+    height: 150px;
+}
+.attendance{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.div1{
+    height: 50px;
+    width: 20%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divSec{
+    height: 25vh;
+    width: 20vw;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-section {
+        background-color: #1a1a2e;
+     color: white;
+       padding: 50px 20px;
+}
+.about-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f05454;
+ }
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+.about-section .read-more{
+       margin-top: 20px;
+}
+.about-section .read-more a{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+   transition: background-color 0.3s, color 0.3s;
+}
+.about-section .read-more a:hover {
+    background-color: #f05454;
+    color: #1a1a2e;
+ }
+.image-section img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.years-of-excellence {
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    background-color: #000;
+    color: #f05454;
+    padding: 5px 10px;
+    font-weight: bold;
+    border: 1px solid white;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+
+}
